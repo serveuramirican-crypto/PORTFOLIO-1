@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+**/node_modules/
+.pnp
+.pnp.js
+
+# Next.js build outputs
+.next/
+out/
+build/
+dist/
+
+# Tools, scraped mirrors, reference screenshots & audit data
+.agent/
+reference_pdp/
+comparison/
+
+# Environment variables
+.env
+.env*.local
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+

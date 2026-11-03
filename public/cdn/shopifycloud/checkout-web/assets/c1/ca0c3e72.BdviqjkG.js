@@ -1,0 +1,1 @@
+import{g as t}from"./2c1ab0fe.BWXgJF0E.js";import{i as e}from"./164ad2e3.BVjhMJcc.js";function i({merchandiseItem:i,hideBadge:o,size:a="small"}){if(null==i)return null;const{title:r,quantity:s,image:n}=i,l=1!==s?s:void 0;return t(e,{size:a,alt:n?.altText||r,src:n?.one,srcSet:n?`${n.one} 1x, ${n.two} 2x, ${n.four} 4x`:void 0,totalItems:o?void 0:l})}export{i as M};
