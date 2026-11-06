@@ -6,7 +6,7 @@ export const ComfortPromise: React.FC = () => {
       <div className="sbcp-wrap">
         <div className="sbcp-media">
           <img
-            src="https://cdn.shopify.com/s/files/1/0748/2156/6647/files/001_b4e9bd9e-e135-4b1d-ad83-836f8b5dc3a6.jpg?v=1792538922"
+            src="/assets/images/260819_D_D_SHOT_126_7644.webp"
             alt="50,000+ happy women and counting"
             loading="lazy"
             width="896"
@@ -16,7 +16,7 @@ export const ComfortPromise: React.FC = () => {
         <div className="sbcp-text">
           <img
             className="sbcp-badge"
-            src="https://cdn.shopify.com/s/files/1/0775/8456/4359/files/002_5abbbfbd-d805-40cc-9ce3-4e29a3b88c30.png?v=1792538922"
+            src="/images/s/files/1/0775/8456/4359/files/002_5abbbfbd-d805-40cc-9ce3-4e29a3b88c30.png"
             alt="30-Day Money-Back Guarantee"
             loading="lazy"
             width="612"
@@ -35,4 +35,3 @@ export const ComfortPromise: React.FC = () => {
     </section>
   );
 };
-

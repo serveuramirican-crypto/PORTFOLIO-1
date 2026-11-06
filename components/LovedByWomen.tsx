@@ -14,7 +14,7 @@ export const LovedByWomen: React.FC = () => {
         <div className="sb-lw-left">
           <img
             className="sb-lw-stars"
-            src="https://cdn.shopify.com/s/files/1/0779/6903/1342/files/001.svg?v=1792538867"
+            src="/images/s/files/1/0779/6903/1342/files/001.svg"
             alt="5 stars"
             width="103"
           />
@@ -26,7 +26,7 @@ export const LovedByWomen: React.FC = () => {
           <ul className="sb-lw-feats">
             <li>
               <img
-                src="https://cdn.shopify.com/s/files/1/0917/4633/6802/files/002_63975983-5e93-48bb-bc05-c16051dab76a.svg?v=1792538867"
+                src="/images/s/files/1/0917/4633/6802/files/002_63975983-5e93-48bb-bc05-c16051dab76a.svg"
                 alt=""
                 style={{ width: "23px" }}
               />
@@ -34,7 +34,7 @@ export const LovedByWomen: React.FC = () => {
             </li>
             <li>
               <img
-                src="https://cdn.shopify.com/s/files/1/1013/6675/9699/files/003.svg?v=1792538867"
+                src="/images/s/files/1/1013/6675/9699/files/003.svg"
                 alt=""
                 style={{ width: "36px" }}
               />
@@ -42,7 +42,7 @@ export const LovedByWomen: React.FC = () => {
             </li>
             <li>
               <img
-                src="https://cdn.shopify.com/s/files/1/0845/5893/8309/files/004.svg?v=1792538867"
+                src="/images/s/files/1/0845/5893/8309/files/004.svg"
                 alt=""
                 style={{ width: "42px" }}
               />
@@ -50,7 +50,7 @@ export const LovedByWomen: React.FC = () => {
             </li>
             <li>
               <img
-                src="https://cdn.shopify.com/s/files/1/0862/1595/0561/files/005.svg?v=1792538867"
+                src="/images/s/files/1/0862/1595/0561/files/005.svg"
                 alt=""
                 style={{ width: "31px" }}
               />
@@ -62,7 +62,7 @@ export const LovedByWomen: React.FC = () => {
           <article className="sb-lw-card">
             <img
               className="sb-lw-photo"
-              src="https://cdn.shopify.com/s/files/1/0841/8512/0994/files/006_bd0b0ea9-f2af-4c1c-a80e-f832969aa21d.jpg?v=1792538868"
+              src="/assets/images/260819_D_D_SHOT_126_7644.webp"
               alt="Sarah R."
               loading="lazy"
             />
@@ -70,7 +70,7 @@ export const LovedByWomen: React.FC = () => {
               <p className="sb-lw-quote">‘’At last, pants that don’t need hemming.’’</p>
               <img
                 className="sb-lw-rate"
-                src="https://cdn.shopify.com/s/files/1/0795/6109/7384/files/007.svg?v=1792538875"
+                src="/images/s/files/1/0795/6109/7384/files/007.svg"
                 alt="5 stars"
                 width="64"
               />
@@ -85,7 +85,7 @@ export const LovedByWomen: React.FC = () => {
           <article className="sb-lw-card">
             <img
               className="sb-lw-photo"
-              src="https://cdn.shopify.com/s/files/1/0848/6780/9537/files/008.jpg?v=1792538882"
+              src="/assets/images/260819_D_D_SHOT_126_7676.webp"
               alt="Jessica L."
               loading="lazy"
             />
@@ -93,7 +93,7 @@ export const LovedByWomen: React.FC = () => {
               <p className="sb-lw-quote">‘’Ideal for travel. No wrinkles, no hassle’’</p>
               <img
                 className="sb-lw-rate"
-                src="https://cdn.shopify.com/s/files/1/0795/6109/7384/files/007.svg?v=1792538875"
+                src="/images/s/files/1/0795/6109/7384/files/007.svg"
                 alt="5 stars"
                 width="64"
               />
@@ -110,7 +110,7 @@ export const LovedByWomen: React.FC = () => {
               <p className="sb-lw-quote sb-lw-narrow">‘’Comfy through every body change.’’</p>
               <img
                 className="sb-lw-rate"
-                src="https://cdn.shopify.com/s/files/1/0795/6109/7384/files/007.svg?v=1792538875"
+                src="/images/s/files/1/0795/6109/7384/files/007.svg"
                 alt="5 stars"
                 width="64"
               />
@@ -123,7 +123,7 @@ export const LovedByWomen: React.FC = () => {
             </div>
             <img
               className="sb-lw-photo sb-lw-photo-sm"
-              src="https://cdn.shopify.com/s/files/1/1013/6675/9699/files/009_0294d2d8-1a8a-4abf-b3a9-51e25f5bb5d4.jpg?v=1792538874"
+              src="/assets/images/260819_D_D_SHOT_126_7687.webp"
               alt="Jessica L."
               loading="lazy"
             />
@@ -131,7 +131,7 @@ export const LovedByWomen: React.FC = () => {
           <article className="sb-lw-card">
             <img
               className="sb-lw-photo"
-              src="https://cdn.shopify.com/s/files/1/0748/2903/7612/files/010_357b977b-ad94-4e10-8b9b-06918f593089.jpg?v=1792538879"
+              src="/assets/images/260819_D_D_SHOT_126_7700.webp"
               alt="Jessica L."
               loading="lazy"
             />
@@ -139,7 +139,7 @@ export const LovedByWomen: React.FC = () => {
               <p className="sb-lw-quote">‘’Makes every outfit look polished right away.’’</p>
               <img
                 className="sb-lw-rate"
-                src="https://cdn.shopify.com/s/files/1/0795/6109/7384/files/007.svg?v=1792538875"
+                src="/images/s/files/1/0795/6109/7384/files/007.svg"
                 alt="5 stars"
                 width="64"
               />
@@ -156,4 +156,3 @@ export const LovedByWomen: React.FC = () => {
     </section>
   );
 };
-

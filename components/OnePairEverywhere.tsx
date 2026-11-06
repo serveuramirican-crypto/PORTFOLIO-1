@@ -16,11 +16,11 @@ export const OnePairEverywhere: React.FC = () => {
       <picture className="sbop-bg">
         <source
           media="(max-width: 749px)"
-          srcSet="https://cdn.shopify.com/s/files/1/0785/5502/1466/files/002_1f09838f-c645-49da-aea2-600b7e1b0310.jpg?v=1792538902"
+          srcSet="/assets/images/260819_D_D_SHOT_126_7669.webp"
         />
         <img
-          src="https://cdn.shopify.com/s/files/1/0763/3030/3649/files/001_722aeb5a-39fb-4615-9cae-268e0892f8ff.jpg?v=1792538901"
-          alt=""
+          src="/assets/images/260819_D_D_SHOT_126_7669.webp"
+          alt="One Pair Everywhere"
           loading="lazy"
         />
       </picture>
@@ -46,4 +46,3 @@ export const OnePairEverywhere: React.FC = () => {
     </section>
   );
 };
-

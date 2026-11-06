@@ -60,3 +60,24 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Continuous infinite marquee movement for Bleame UGC section */
+@keyframes bleame-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-bleame-marquee {
+  display: flex;
+  width: max-content;
+  animation: bleame-marquee 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-bleame-marquee:hover {
+  animation-play-state: paused;
+}

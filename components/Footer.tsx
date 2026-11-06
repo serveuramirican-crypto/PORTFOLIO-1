@@ -32,14 +32,9 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#3e4f5f]">
           {/* Brand Col */}
           <div className="md:col-span-5 space-y-4">
-            <div className="relative w-40 h-8 brightness-0 invert">
-              <Image
-                src="/images/logo_efa23b6a-47c7-410d-b4f2-fe8aa411615e.png"
-                alt="Curvd London"
-                fill
-                className="object-contain"
-              />
-            </div>
+            <span className="font-extrabold tracking-[-0.04em] text-2xl md:text-3xl text-white font-sans uppercase block">
+              CURVD.
+            </span>
             <p className="text-sm text-gray-300 max-w-sm leading-relaxed">
               Timeless apparel crafted with buttery-soft stretch materials for effortless all-day elegance and unrestricted comfort.
             </p>

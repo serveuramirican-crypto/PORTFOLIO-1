@@ -67,17 +67,21 @@ export const FaqSection: React.FC = () => {
       <picture className="sbfq-bg">
         <source
           media="(max-width: 749px)"
-          srcSet="https://cdn.shopify.com/s/files/1/0847/3398/4984/files/002_a3a348e8-8193-4179-bb52-2617c04c7d72.jpg?v=1792538969"
+          srcSet="/assets/images/260819_D_D_SHOT_126_7662.webp"
         />
         <img
-          src="https://cdn.shopify.com/s/files/1/0795/9032/6377/files/001_fe2da199-b5c8-4acc-970d-3d9dd771e8af.jpg?v=1792538971"
-          alt="Woman wearing beige cropped wide-leg pants"
+          src="/assets/images/260819_D_D_SHOT_126_7662.webp"
+          alt="Frequently Asked Questions background"
           loading="lazy"
         />
       </picture>
       <div className="sbfq-inner">
         <div className="sbfq-col">
-          <h2 className="sbfq-title">frequently asked questions</h2>
+          <div className="mb-4">
+            <h2 className="sbfq-title bg-white/85 backdrop-blur-xs px-6 py-2 rounded-xl inline-block shadow-2xs border border-stone-200/40">
+              frequently asked questions
+            </h2>
+          </div>
           <div className="sbfq-list" data-sbfq-list="">
             {FAQS.map((faq, idx) => {
               const isOpen = openIndexes.includes(idx);

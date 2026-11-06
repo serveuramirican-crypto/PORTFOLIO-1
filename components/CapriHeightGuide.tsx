@@ -6,16 +6,16 @@ export const CapriHeightGuide: React.FC = () => {
       <picture className="sbch-bg">
         <source
           media="(max-width: 749px)"
-          srcSet="https://cdn.shopify.com/s/files/1/0684/1814/2295/files/006_d7f7fd90-1e17-4b47-ba2d-c13890aa6035.jpg?v=1792538894"
+          srcSet="/assets/images/260819_D_D_SHOT_126_7662.webp"
         />
         <img
-          src="https://cdn.shopify.com/s/files/1/1099/7281/6158/files/005_f225e125-7479-4032-af21-5ab21ad79d51.jpg?v=1792538894"
-          alt="Three women wearing capri pants"
+          src="/assets/images/260819_D_D_SHOT_126_7662.webp"
+          alt="Capri length demonstration"
           loading="lazy"
         />
       </picture>
       <div className="sbch-inner">
-        <div className="sbch-text">
+        <div className="sbch-text bg-white/90 backdrop-blur-xs p-6 sm:p-8 rounded-2xl shadow-sm border border-stone-200/50">
           <p className="sbch-kicker">UNIVERSALLY FLATTERING CAPRI LENGTH</p>
           <h2 className="sbch-title">Looks Good at Every Height</h2>
           <p className="sbch-body">
@@ -24,7 +24,7 @@ export const CapriHeightGuide: React.FC = () => {
           <ul className="sbch-feats">
             <li>
               <img
-                src="https://cdn.shopify.com/s/files/1/0822/0318/1297/files/001.svg?v=1792538894"
+                src="/images/s/files/1/0822/0318/1297/files/001.svg"
                 alt=""
                 width="58"
                 height="58"
@@ -37,7 +37,7 @@ export const CapriHeightGuide: React.FC = () => {
             </li>
             <li>
               <img
-                src="https://cdn.shopify.com/s/files/1/0848/4316/7997/files/002.svg?v=1792538893"
+                src="/images/s/files/1/0848/4316/7997/files/002.svg"
                 alt=""
                 width="58"
                 height="58"
@@ -50,7 +50,7 @@ export const CapriHeightGuide: React.FC = () => {
             </li>
             <li>
               <img
-                src="https://cdn.shopify.com/s/files/1/0847/5908/5311/files/003.svg?v=1792538894"
+                src="/images/s/files/1/0847/5908/5311/files/003.svg"
                 alt=""
                 width="58"
                 height="58"
@@ -63,7 +63,7 @@ export const CapriHeightGuide: React.FC = () => {
             </li>
             <li>
               <img
-                src="https://cdn.shopify.com/s/files/1/1091/2982/6673/files/004.svg?v=1792538893"
+                src="/images/s/files/1/1091/2982/6673/files/004.svg"
                 alt=""
                 width="58"
                 height="58"
@@ -80,4 +80,3 @@ export const CapriHeightGuide: React.FC = () => {
     </section>
   );
 };
-

@@ -5,8 +5,8 @@ export const MidPageOffer: React.FC = () => {
     <section id="sb-capri-offer">
       <img
         className="sbof-bg"
-        src="https://cdn.shopify.com/s/files/1/1006/1522/5663/files/001_a93a4fc6-9dcb-4cff-b009-eeae03129567.jpg?v=1792538916"
-        alt=""
+        src="/assets/images/260819_D_D_SHOT_126_7662.webp"
+        alt="Special offer background"
         loading="lazy"
       />
       <div
@@ -34,4 +34,3 @@ export const MidPageOffer: React.FC = () => {
     </section>
   );
 };
-

@@ -10,16 +10,16 @@ interface ReelItem {
 
 const REELS_DATA: ReelItem[] = [
   {
-    videoSrc: "https://cdn.shopify.com/videos/c/o/v/00a6818fab574232abc725546c5aefc6.mp4",
-    poster: "https://cdn.shopify.com/s/files/1/0795/9032/6377/files/006_dfc3fb93-52d6-4fce-a534-9973b79afd5c.jpg?v=1792538796",
+    videoSrc: "/assets/f431405622bc4a5984cd7070a5a5d99a.HD-1080p-7.2Mbps-92682564.mp4",
+    poster: "/assets/images/260819_D_D_SHOT_126_7644.webp",
   },
   {
-    videoSrc: "https://cdn.shopify.com/videos/c/o/v/e7a5264ecc3a4e0abaf56a072f8f716e.mp4",
-    poster: "https://cdn.shopify.com/s/files/1/0836/5608/1659/files/008_1a045b62-694e-4a2b-ab8a-ee8f3941289f.jpg?v=1792538796",
+    videoSrc: "/assets/f68bb583b0464ec8974b542e02be3a27.HD-1080p-7.2Mbps-92681580.mp4",
+    poster: "/assets/images/260819_D_D_SHOT_126_7669.webp",
   },
   {
-    videoSrc: "https://cdn.shopify.com/videos/c/o/v/ace7f58ed338467d98057fdf84d03294.mp4",
-    poster: "https://cdn.shopify.com/s/files/1/1006/1522/5663/files/009_19fb9bb7-d0c6-4107-b04b-c410d8bb7f49.jpg?v=1792538803",
+    videoSrc: "/assets/ff371fbbc9e747efb1fd42d1b7c2eab4.HD-1080p-7.2Mbps-92681768.mp4",
+    poster: "/assets/images/260819_D_D_SHOT_126_7676.webp",
   },
 ];
 
@@ -105,4 +105,3 @@ export const VideoReels: React.FC = () => {
     </section>
   );
 };
-

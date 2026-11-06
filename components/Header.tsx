@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Search, ShoppingBag, Menu, X, ChevronDown } from "lucide-react";
 import { useCart } from "./CartContext";
@@ -9,7 +8,7 @@ import { useCart } from "./CartContext";
 export const Header: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [currency, setCurrency] = useState("USD $");
+  const [currency] = useState("USD $");
   const { totalItems, openCart } = useCart();
 
   const navLinks = [
@@ -24,12 +23,13 @@ export const Header: React.FC = () => {
   return (
     <>
       <header className="sticky top-0 z-40 bg-white border-b border-gray-100 transition-shadow duration-200">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-8 h-16 md:h-20 flex items-center justify-between">
+        {/* Top Header Row */}
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-18 flex items-center justify-between">
           {/* Left: Mobile Menu + Search */}
           <div className="flex items-center gap-3 md:gap-5 flex-1">
             <button
               onClick={() => setDrawerOpen(true)}
-              className="p-1 text-gray-800 hover:text-black transition"
+              className="p-1 text-gray-900 hover:text-black md:hidden transition"
               aria-label="Open menu"
             >
               <Menu className="w-6 h-6 stroke-[1.8]" />
@@ -37,7 +37,7 @@ export const Header: React.FC = () => {
 
             <button
               onClick={() => setSearchOpen(true)}
-              className="p-1 text-gray-800 hover:text-black transition"
+              className="p-1 text-gray-900 hover:text-black transition"
               aria-label="Search"
             >
               <Search className="w-5 h-5 stroke-[1.8]" />
@@ -46,29 +46,23 @@ export const Header: React.FC = () => {
 
           {/* Center: Logo */}
           <div className="flex items-center justify-center flex-shrink-0">
-            <Link href="/" className="inline-block relative">
-              <div className="relative w-36 h-7 md:w-52 md:h-10">
-                <Image
-                  src="/images/logo_efa23b6a-47c7-410d-b4f2-fe8aa411615e.png"
-                  alt="Curvd London"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
+            <Link href="/" className="inline-block text-center select-none">
+              <span className="font-extrabold tracking-[-0.04em] text-2xl sm:text-3xl md:text-[34px] text-[#121212] font-sans uppercase">
+                CURVD.
+              </span>
             </Link>
           </div>
 
           {/* Right: Currency + Bag */}
           <div className="flex items-center justify-end gap-3 md:gap-5 flex-1">
-            <div className="hidden sm:flex items-center text-xs font-medium text-gray-700 hover:text-black cursor-pointer">
+            <div className="hidden sm:flex items-center text-xs font-semibold text-gray-700 hover:text-black cursor-pointer tracking-wider">
               <span>{currency}</span>
               <ChevronDown className="w-3.5 h-3.5 ml-0.5 opacity-70" />
             </div>
 
             <button
               onClick={openCart}
-              className="relative p-1 text-gray-800 hover:text-black transition"
+              className="relative p-1 text-gray-900 hover:text-black transition"
               aria-label="Open cart"
             >
               <ShoppingBag className="w-5 h-5 md:w-6 md:h-6 stroke-[1.8]" />
@@ -80,28 +74,41 @@ export const Header: React.FC = () => {
             </button>
           </div>
         </div>
+
+        {/* Desktop Navigation Row */}
+        <nav className="hidden md:flex items-center justify-center gap-7 pb-3.5 pt-0.5 border-t border-gray-50/80">
+          {navLinks.map((link) => (
+            <Link
+              key={link.title}
+              href={link.href}
+              className={`text-[13px] tracking-wide transition-colors ${
+                link.active
+                  ? "text-black font-semibold border-b border-black pb-0.5"
+                  : "text-gray-700 hover:text-black font-medium"
+              }`}
+            >
+              {link.title}
+            </Link>
+          ))}
+        </nav>
       </header>
 
       {/* Mobile Drawer */}
       {drawerOpen && (
         <div className="fixed inset-0 z-50 flex">
           <div
-            className="fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity"
+            className="fixed inset-0 bg-black/40 backdrop-blur-xs transition-opacity"
             onClick={() => setDrawerOpen(false)}
           />
           <div className="relative w-full max-w-xs bg-white h-full shadow-2xl flex flex-col p-6 z-10 animate-in slide-in-from-left duration-200">
             <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-100">
-              <div className="relative w-32 h-6">
-                <Image
-                  src="/images/logo_efa23b6a-47c7-410d-b4f2-fe8aa411615e.png"
-                  alt="Curvd London"
-                  fill
-                  className="object-contain"
-                />
-              </div>
+              <span className="font-extrabold tracking-tight text-2xl text-[#121212] font-sans uppercase">
+                CURVD.
+              </span>
               <button
                 onClick={() => setDrawerOpen(false)}
                 className="p-1 text-gray-500 hover:text-black"
+                aria-label="Close menu"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -136,7 +143,7 @@ export const Header: React.FC = () => {
       {searchOpen && (
         <div className="fixed inset-0 z-50 flex items-start justify-center pt-24 px-4">
           <div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/50 backdrop-blur-xs"
             onClick={() => setSearchOpen(false)}
           />
           <div className="relative w-full max-w-xl bg-white rounded-xl shadow-2xl p-5 z-10 animate-in zoom-in-95 duration-150">
@@ -172,4 +179,3 @@ export const Header: React.FC = () => {
     </>
   );
 };
-

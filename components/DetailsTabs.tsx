@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { Check, Sparkles, Feather, Move, Wind, Layers, ShieldCheck, HeartHandshake } from "lucide-react";
 
 export const DetailsTabs: React.FC = () => {

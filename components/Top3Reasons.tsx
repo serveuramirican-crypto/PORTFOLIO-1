@@ -4,10 +4,10 @@ import React, { useState, useRef } from "react";
 
 const CARDS = [
   {
-    num: "https://cdn.shopify.com/s/files/1/0797/2375/7651/files/001.svg?v=1792538845",
+    num: "/images/s/files/1/0797/2375/7651/files/001.svg",
     numAlt: "01",
-    photo: "https://cdn.shopify.com/s/files/1/0779/6903/1342/files/004_c60d6ab8-2c72-4b0c-be3c-7125cc5421d2.jpg?v=1792538846",
-    shade: "https://cdn.shopify.com/s/files/1/0847/5908/5311/files/005.png?v=1792538847",
+    photo: "/assets/images/260819_D_D_SHOT_126_7644.webp",
+    shade: "/images/s/files/1/0847/5908/5311/files/005.png",
     name: "Confidence in Every Outfit",
     bullets: [
       "Lifts even the simplest look",
@@ -16,10 +16,10 @@ const CARDS = [
     ],
   },
   {
-    num: "https://cdn.shopify.com/s/files/1/1091/2985/9441/files/002.svg?v=1792538845",
+    num: "/images/s/files/1/1091/2985/9441/files/002.svg",
     numAlt: "02",
-    photo: "https://cdn.shopify.com/s/files/1/0772/5383/6886/files/006_2076934e-be4f-424e-bb42-3bf0de232b2e.jpg?v=1792538846",
-    shade: "https://cdn.shopify.com/s/files/1/0806/1989/6971/files/007_86e81280-687e-4ea5-a725-edf9aa09b732.png?v=1792538853",
+    photo: "/assets/images/260819_D_D_SHOT_126_7669.webp",
+    shade: "/images/s/files/1/0806/1989/6971/files/007_86e81280-687e-4ea5-a725-edf9aa09b732.png",
     name: "Cool & Comfortable",
     bullets: [
       "Light, breathable fabric",
@@ -28,10 +28,10 @@ const CARDS = [
     ],
   },
   {
-    num: "https://cdn.shopify.com/s/files/1/1091/2982/6673/files/003.svg?v=1792538845",
+    num: "/images/s/files/1/1091/2982/6673/files/003.svg",
     numAlt: "03",
-    photo: "https://cdn.shopify.com/s/files/1/0797/2375/7651/files/008.jpg?v=1792538853",
-    shade: "https://cdn.shopify.com/s/files/1/0845/2731/7054/files/009_66e6f004-fa70-4089-8619-df1b7a72b62d.png?v=1792538853",
+    photo: "/assets/images/260819_D_D_SHOT_126_7676.webp",
+    shade: "/images/s/files/1/0845/2731/7054/files/009_66e6f004-fa70-4089-8619-df1b7a72b62d.png",
     name: "Designed to Flatter",
     bullets: [
       "Works with your natural shape",
@@ -134,4 +134,3 @@ export const Top3Reasons: React.FC = () => {
     </section>
   );
 };
-

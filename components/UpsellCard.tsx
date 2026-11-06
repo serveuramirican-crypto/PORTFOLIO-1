@@ -7,7 +7,7 @@ import { useCart } from "./CartContext";
 
 export const UpsellCard: React.FC = () => {
   const [size, setSize] = useState("S");
-  const [color, setColor] = useState("Black");
+  const [color, setColor] = useState("Cream Leopard");
   const [inseam, setInseam] = useState('29" Regular');
   const [added, setAdded] = useState(false);
   const { addItem } = useCart();
@@ -21,7 +21,7 @@ export const UpsellCard: React.FC = () => {
       price: 65,
       originalPrice: 105,
       quantity: 1,
-      image: "/images/hf_20260903_195550_722abe0b-9d4f-4a28-aad9-277bf45d9642.webp",
+      image: "/assets/images/Desmond-and-Dempsey-Long-Pyjama-Set-The-Jag-Print-Cream-Cutout.jpg",
       color,
       size,
     });
@@ -32,7 +32,7 @@ export const UpsellCard: React.FC = () => {
   return (
     <section className="max-w-[850px] mx-auto px-4 py-8 space-y-8">
       {/* Upsell Cross-sell Box */}
-      <div className="bg-white rounded-2xl border border-[#E1D7CD] p-5 sm:p-7 shadow-xs">
+      <div className="bg-white rounded-2xl border border-[#E1D7CD] p-5 sm:p-7 shadow-2xs">
         <p className="text-center font-bold text-gray-800 text-sm sm:text-base mb-5">
           Adore the fit but want a longer option?
         </p>
@@ -41,7 +41,7 @@ export const UpsellCard: React.FC = () => {
           {/* Product Image */}
           <div className="relative w-36 h-44 sm:w-40 sm:h-48 rounded-xl overflow-hidden bg-gray-100 flex-shrink-0">
             <Image
-              src="/images/hf_20260903_195550_722abe0b-9d4f-4a28-aad9-277bf45d9642.webp"
+              src="/assets/images/Desmond-and-Dempsey-Long-Pyjama-Set-The-Jag-Print-Cream-Cutout.jpg"
               alt="Everyday Stretch Pants"
               fill
               className="object-cover"
@@ -85,9 +85,9 @@ export const UpsellCard: React.FC = () => {
                   onChange={(e) => setColor(e.target.value)}
                   className="w-full text-xs font-medium py-1.5 px-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-[#704F30]"
                 >
-                  <option value="Black">Black</option>
-                  <option value="Blue">Blue</option>
-                  <option value="Coffee">Coffee</option>
+                  <option value="Cream Leopard">Cream Leopard</option>
+                  <option value="Classic Black">Classic Black</option>
+                  <option value="Espresso">Espresso</option>
                 </select>
               </div>
 
@@ -115,7 +115,7 @@ export const UpsellCard: React.FC = () => {
               <button
                 type="button"
                 onClick={handleAddUpsell}
-                className="py-2.5 px-5 bg-[#704F30] hover:bg-[#5a3e25] text-white text-xs font-bold rounded-lg uppercase tracking-wider transition active:scale-95 shadow-xs"
+                className="py-2.5 px-5 bg-[#704F30] hover:bg-[#5a3e25] text-white text-xs font-bold rounded-lg uppercase tracking-wider transition active:scale-95 shadow-2xs"
               >
                 {added ? "Added ✓" : "SHOP NOW"}
               </button>
@@ -141,4 +141,3 @@ export const UpsellCard: React.FC = () => {
     </section>
   );
 };
-

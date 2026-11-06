@@ -6,11 +6,11 @@ export const WhyWeMadeThis: React.FC = () => {
       <picture className="sb-wwm-bg">
         <source
           media="(max-width: 749px)"
-          srcSet="https://cdn.shopify.com/s/files/1/0797/2375/7651/files/002_bde86454-fc0f-43f1-8186-5acc165c1fbb.jpg?v=1792538839"
+          srcSet="/assets/images/260819_D_D_SHOT_126_7644.webp"
         />
         <img
-          src="https://cdn.shopify.com/s/files/1/1036/8529/2311/files/001_665c1b73-34c0-48b0-8eea-9cad505c5183.jpg?v=1792538839"
-          alt=""
+          src="/assets/images/260819_D_D_SHOT_126_7644.webp"
+          alt="Why We Made This background"
           loading="lazy"
           width="2880"
           height="502"
@@ -25,4 +25,3 @@ export const WhyWeMadeThis: React.FC = () => {
     </section>
   );
 };
-

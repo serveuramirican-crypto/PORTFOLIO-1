@@ -122,11 +122,11 @@ export const ReviewsSection: React.FC = () => {
               </p>
               <img
                 className="sbot-reviews__photo"
-                src="https://cdn.shopify.com/s/files/1/0986/8666/4977/files/6_0cea1f16-59cb-43b2-8ed5-77b56e24c9b0.png?v=1792537769&width=320"
+                src="/assets/images/260819_D_D_SHOT_126_7679.webp"
                 loading="lazy"
                 width="96"
                 height="96"
-                alt=""
+                alt="Product review photo"
               />
               <footer className="sbot-reviews__meta">
                 <span className="sbot-reviews__author">Sarah P.</span>
@@ -208,11 +208,11 @@ export const ReviewsSection: React.FC = () => {
               </p>
               <img
                 className="sbot-reviews__photo"
-                src="https://cdn.shopify.com/s/files/1/0986/8666/4977/files/1_dc78fe8f-3cb5-4cdb-ade4-b100fa0e4f7b.png?v=1792537770&width=320"
+                src="/assets/images/Desmond_Dempsey-Monogramming-large-LEOPARD-CREAM-H4H_67210305-4ad3-4057-ab39-80836c83db7a.webp"
                 loading="lazy"
                 width="96"
                 height="96"
-                alt=""
+                alt="Product review photo"
               />
               <footer className="sbot-reviews__meta">
                 <span className="sbot-reviews__author">Emily F.</span>

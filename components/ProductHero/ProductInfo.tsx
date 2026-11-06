@@ -20,19 +20,19 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ onColorChange }) => {
   // Maintain selections for each tier
   const [tierSelections, setTierSelections] = useState<Record<number, ItemSelection[]>>({
     0: [
-      { color: "Black", size: "M" },
-      { color: "Black", size: "M" },
+      { color: "The Jag Print (Cream)", size: "M" },
+      { color: "The Jag Print (Cream)", size: "M" },
     ],
     1: [
-      { color: "Black", size: "M" },
-      { color: "Black", size: "M" },
-      { color: "Black", size: "M" },
+      { color: "The Jag Print (Cream)", size: "M" },
+      { color: "The Jag Print (Cream)", size: "M" },
+      { color: "The Jag Print (Cream)", size: "M" },
     ],
     2: [
-      { color: "Black", size: "M" },
-      { color: "Black", size: "M" },
-      { color: "Black", size: "M" },
-      { color: "Black", size: "M" },
+      { color: "The Jag Print (Cream)", size: "M" },
+      { color: "The Jag Print (Cream)", size: "M" },
+      { color: "The Jag Print (Cream)", size: "M" },
+      { color: "The Jag Print (Cream)", size: "M" },
     ],
   });
 
@@ -67,7 +67,7 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ onColorChange }) => {
     setIsAdding(true);
     setTimeout(() => {
       const itemsForTier = tierSelections[selectedTierId] || [];
-      const primaryColor = itemsForTier[0]?.color || "Black";
+      const primaryColor = itemsForTier[0]?.color || "The Jag Print (Cream)";
       const primarySize = itemsForTier[0]?.size || "M";
       const colorObj = COLOR_OPTIONS.find((c) => c.name === primaryColor) || COLOR_OPTIONS[0];
 

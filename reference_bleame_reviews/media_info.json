@@ -1,0 +1,69 @@
+{
+  "mediaCount": 120,
+  "mediaSample": [
+    {
+      "tag": "DIV",
+      "class": "item-img box",
+      "style": "position:relative;",
+      "imgSrc": "https://images.loox.io/uploads/2026/5/23/C-UG1c-J1_EVkFSwu7a_orig.jpg",
+      "bg": "",
+      "html": "<div style=\"position:relative;\" data-testid=\"review-C-UG1c-J1-media\" class=\"item-img box\"><div class=\"image-aspect-ratio-wrapper\"><div style=\"padding-bottom: 178%;\" class=\"image-aspect-ratio\"></div><img src=\"//images.loox.io/uploads/2026/5/23/C-UG1c-J1_EVkFSwu7a_orig.jpg\" alt=\"Customer video review "
+    },
+    {
+      "tag": "DIV",
+      "class": "image-aspect-ratio-wrapper",
+      "style": null,
+      "imgSrc": "https://images.loox.io/uploads/2026/5/23/C-UG1c-J1_EVkFSwu7a_orig.jpg",
+      "bg": "",
+      "html": "<div class=\"image-aspect-ratio-wrapper\"><div style=\"padding-bottom: 178%;\" class=\"image-aspect-ratio\"></div><img src=\"//images.loox.io/uploads/2026/5/23/C-UG1c-J1_EVkFSwu7a_orig.jpg\" alt=\"Customer video review of Bleame Crystal Hair Eraser\" data-img-ratio=\"1.78\" style=\"background:rgb(56, 40, 40);\" o"
+    },
+    {
+      "tag": "DIV",
+      "class": "image-aspect-ratio",
+      "style": "padding-bottom: 178%;",
+      "bg": "",
+      "html": "<div style=\"padding-bottom: 178%;\" class=\"image-aspect-ratio\"></div>"
+    },
+    {
+      "tag": "DIV",
+      "class": "item-img box",
+      "style": "position:relative;",
+      "imgSrc": "https://images.loox.io/uploads/2026/5/7/kb9dqWaa_.jpg",
+      "bg": "",
+      "html": "<div style=\"position:relative;\" data-testid=\"review-c-sMHGTYZ-media\" class=\"item-img box\"><div class=\"image-aspect-ratio-wrapper\"><div style=\"padding-bottom: 133%;\" class=\"image-aspect-ratio\"></div><img src=\"//images.loox.io/uploads/2026/5/7/kb9dqWaa_.jpg\" alt=\"Customer holding the purple Bleame Cry"
+    },
+    {
+      "tag": "DIV",
+      "class": "image-aspect-ratio-wrapper",
+      "style": null,
+      "imgSrc": "https://images.loox.io/uploads/2026/5/7/kb9dqWaa_.jpg",
+      "bg": "",
+      "html": "<div class=\"image-aspect-ratio-wrapper\"><div style=\"padding-bottom: 133%;\" class=\"image-aspect-ratio\"></div><img src=\"//images.loox.io/uploads/2026/5/7/kb9dqWaa_.jpg\" alt=\"Customer holding the purple Bleame Crystal Hair Eraser in their hand.\" data-img-ratio=\"1.33\" style=\"background:rgb(216, 184, 152"
+    },
+    {
+      "tag": "DIV",
+      "class": "image-aspect-ratio",
+      "style": "padding-bottom: 133%;",
+      "bg": "",
+      "html": "<div style=\"padding-bottom: 133%;\" class=\"image-aspect-ratio\"></div>"
+    },
+    {
+      "tag": "DIV",
+      "class": "item-img box",
+      "style": "position:relative;",
+      "imgSrc": "https://images.loox.io/uploads/2026/3/8/Ed8rTqM7l.jpg",
+      "bg": "",
+      "html": "<div style=\"position:relative;\" data-testid=\"review-VbChc697k-media\" class=\"item-img box\"><div class=\"image-aspect-ratio-wrapper\"><div style=\"padding-bottom: 133%;\" class=\"image-aspect-ratio\"></div><img src=\"//images.loox.io/uploads/2026/3/8/Ed8rTqM7l.jpg\" alt=\"Customer holding the light purple Blea"
+    },
+    {
+      "tag": "DIV",
+      "class": "image-aspect-ratio-wrapper",
+      "style": null,
+      "imgSrc": "https://images.loox.io/uploads/2026/3/8/Ed8rTqM7l.jpg",
+      "bg": "",
+      "html": "<div class=\"image-aspect-ratio-wrapper\"><div style=\"padding-bottom: 133%;\" class=\"image-aspect-ratio\"></div><img src=\"//images.loox.io/uploads/2026/3/8/Ed8rTqM7l.jpg\" alt=\"Customer holding the light purple Bleame Crystal Hair Eraser in their hand.\" data-img-ratio=\"1.33\" style=\"background:rgb(40, 40,"
+    }
+  ],
+  "blocksCount": 0,
+  "blocksSample": []
+}

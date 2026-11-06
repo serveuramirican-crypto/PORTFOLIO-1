@@ -20,12 +20,31 @@ export interface BundleTier {
 }
 
 export const COLOR_OPTIONS = [
-  { name: "Black", image: "/images/capri_black.webp", hex: "#111111" },
-  { name: "Espresso", image: "/images/capri_coffee.webp", hex: "#4A3728" },
-  { name: "Navy Blue", image: "/images/capri_navy.webp", hex: "#1D2A44" },
-  { name: "Light Khaki", image: "/images/capri_light_khaki.webp", hex: "#D6C7B2" },
-  { name: "White", image: "/images/capri_white.webp", hex: "#FFFFFF" },
-  { name: "Taupe", image: "/images/capri_taupe.webp", hex: "#A8988B" },
+  {
+    name: "The Jag Print (Cream)",
+    image: "/assets/images/Desmond-and-Dempsey-Long-Pyjama-Set-The-Jag-Print-Cream-Cutout.jpg",
+    hex: "#ECE4D6",
+  },
+  {
+    name: "Studio Front",
+    image: "/assets/images/260819_D_D_SHOT_126_7644.webp",
+    hex: "#2B2A28",
+  },
+  {
+    name: "Side Profile",
+    image: "/assets/images/260819_D_D_SHOT_126_7655.webp",
+    hex: "#CFC3B3",
+  },
+  {
+    name: "Rear View",
+    image: "/assets/images/260819_D_D_SHOT_126_7662.webp",
+    hex: "#1E2024",
+  },
+  {
+    name: "Pocket Monogram",
+    image: "/assets/images/Desmond_Dempsey-Monogramming-large-LEOPARD-CREAM-H4H_67210305-4ad3-4057-ab39-80836c83db7a.webp",
+    hex: "#B8A38E",
+  },
 ];
 
 export const SIZE_OPTIONS = ["XS", "S", "M", "L", "XL", "2XL"];
@@ -86,7 +105,7 @@ export const BundleSelector: React.FC<BundleSelectorProps> = ({
               onClick={() => onSelectTier(tier.id)}
               className={`relative rounded-xl border transition-all cursor-pointer ${
                 isSelected
-                  ? "border-[#BAA694] bg-[#FAF8F6] ring-1 ring-[#BAA694] p-3.5 md:p-4 shadow-sm"
+                  ? "border-[#BAA694] bg-[#FAF8F6] ring-1 ring-[#BAA694] p-3.5 md:p-4 shadow-2xs"
                   : "border-[#E1D7CD]/70 bg-white hover:border-[#BAA694]/60 p-3.5 md:p-4"
               }`}
             >
@@ -206,4 +225,3 @@ export const BundleSelector: React.FC<BundleSelectorProps> = ({
     </div>
   );
 };
-

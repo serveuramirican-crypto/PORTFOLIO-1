@@ -7,7 +7,7 @@ export const SecondaryTrustBar: React.FC = () => {
         <div className="sbtb-item">
           <img
             className="sbtb-ic"
-            src="https://cdn.shopify.com/s/files/1/0748/2903/7612/files/001.svg?v=1792538942"
+            src="/images/s/files/1/0748/2903/7612/files/001.svg"
             alt=""
             width="38"
             height="38"
@@ -21,7 +21,7 @@ export const SecondaryTrustBar: React.FC = () => {
         <div className="sbtb-item sbtb-mid">
           <img
             className="sbtb-ic"
-            src="https://cdn.shopify.com/s/files/1/0847/5908/5311/files/002.svg?v=1792538942"
+            src="/images/s/files/1/0847/5908/5311/files/002.svg"
             alt=""
             width="33"
             height="33"
@@ -35,7 +35,7 @@ export const SecondaryTrustBar: React.FC = () => {
         <div className="sbtb-item">
           <img
             className="sbtb-ic"
-            src="https://cdn.shopify.com/s/files/1/0788/4131/5520/files/003.svg?v=1792538942"
+            src="/images/s/files/1/0788/4131/5520/files/003.svg"
             alt=""
             width="29"
             height="29"
@@ -50,4 +50,3 @@ export const SecondaryTrustBar: React.FC = () => {
     </section>
   );
 };
-
