@@ -183,14 +183,16 @@ export const PrimalsSocialProof: React.FC = () => {
                   className="object-cover group-hover/card:scale-103 transition-transform duration-300"
                 />
 
-                {/* Empty Video Tag Ready for Manual Source */}
-                <video
-                  className="hidden w-full h-full object-cover"
-                  src={item.videoSrc}
-                  poster={item.poster}
-                  playsInline
-                  controls
-                />
+                {/* Video Tag (rendered only when videoSrc is provided to prevent empty src browser error) */}
+                {item.videoSrc ? (
+                  <video
+                    className="hidden w-full h-full object-cover"
+                    src={item.videoSrc}
+                    poster={item.poster}
+                    playsInline
+                    controls
+                  />
+                ) : null}
 
                 {/* Sound / Mute Icon Button (Top Right) */}
                 <button

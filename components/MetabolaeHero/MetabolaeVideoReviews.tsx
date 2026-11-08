@@ -1,143 +1,202 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
+import React, { useState, useRef } from "react";
 
 interface VideoReview {
   id: string;
-  image: string;
+  videoSrc: string;
   alt: string;
   title: string;
   author: string;
   role: string;
-  quote?: string;
+  quote: string;
 }
 
 export const MetabolaeVideoReviews: React.FC = () => {
   const [playingId, setPlayingId] = useState<string | null>(null);
+  const [modalVideoId, setModalVideoId] = useState<string | null>(null);
+  const [isMuted, setIsMuted] = useState<{ [id: string]: boolean }>({
+    "video-1": false,
+    "video-2": false,
+  });
+
+  const videoRefs = useRef<{ [id: string]: HTMLVideoElement | null }>({});
 
   const reviews: VideoReview[] = [
     {
-      id: "doc-1",
-      image: "/metabolae_assets/img_39_metabolae-doctor-blood-sugar-thumbnail.png",
-      alt: "Medical Doctor Explaining Ceylon Cinnamon Blood Sugar Benefits",
-      title: "Doctor Review on Blood Sugar",
-      author: "Dr. Henderson, M.D.",
-      role: "Endocrine Specialist",
+      id: "video-1",
+      videoSrc: "/customer_videos/vsl_video_1.mp4",
+      alt: "Customer review video 1",
+      title: "Lookbook Styling & Fit",
+      author: "Emma R.",
+      role: "Verified Buyer",
+      quote: "The fabric feels like absolute luxury. Fits perfectly and moves effortlessly!",
     },
     {
-      id: "ugc-1",
-      image: "/metabolae_assets/img_40_metabolae-ugc-cravings-blood-sugar-thumbnail.png",
-      alt: "Customer Review Holding Ceylon Cinnamon Softgels",
-      title: "Real Customer Ceylon Cinnamon Results",
-      author: "Sarah M.",
-      role: "Verified Customer",
-    },
-    {
-      id: "doc-2",
-      image: "/metabolae_assets/img_41_metabolae-doctor-diabetes-industry-thumbnail.png",
-      alt: "Medical Professional Discussing Metabolic Health & Ceylon Cinnamon",
-      title: "Why Standard Cinnamon Fails",
-      author: "Dr. Lin, Ph.D.",
-      role: "Clinical Nutritionist",
+      id: "video-2",
+      videoSrc: "/customer_videos/vsl_video_2.mp4",
+      alt: "Customer review video 2",
+      title: "All Day Comfort & Elegance",
+      author: "Chloe D.",
+      role: "Verified Buyer",
+      quote: "Hands down the most comfortable and stylish set I've ever owned. Love the print!",
     },
   ];
 
+  const handleTogglePlay = (id: string) => {
+    const videoEl = videoRefs.current[id];
+    if (!videoEl) return;
+
+    if (playingId === id) {
+      videoEl.pause();
+      setPlayingId(null);
+    } else {
+      // Pause any other playing video first
+      if (playingId && videoRefs.current[playingId]) {
+        videoRefs.current[playingId]?.pause();
+      }
+      videoEl.muted = !!isMuted[id];
+      videoEl.play().catch(() => {
+        // Fallback to muted if browser blocks unmuted playback
+        videoEl.muted = true;
+        setIsMuted((prev) => ({ ...prev, [id]: true }));
+        videoEl.play().catch(() => {});
+      });
+      setPlayingId(id);
+    }
+  };
+
+  const handleToggleMute = (id: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    const videoEl = videoRefs.current[id];
+    if (videoEl) {
+      const nextMuted = !videoEl.muted;
+      videoEl.muted = nextMuted;
+      setIsMuted((prev) => ({ ...prev, [id]: nextMuted }));
+    }
+  };
+
+  const activeModalReview = reviews.find((r) => r.id === modalVideoId);
+
   return (
-    <div className="w-full mt-4 sm:mt-5">
-      <h3 className="text-base sm:text-lg font-bold text-center text-stone-900 mb-3 sm:mb-4">
+    <div className="w-full mt-3 sm:mt-4">
+      {/* Heading */}
+      <h3 className="text-base sm:text-lg font-bold text-neutral-900 mb-3 text-left">
         What our customers are saying:
       </h3>
 
-      {/* 3 Video Cards - Increased size and aspect ratio matching Screenshot 3 */}
-      <div className="grid grid-cols-3 gap-2 sm:gap-3.5">
-        {reviews.map((rev) => (
-          <div
-            key={rev.id}
-            onClick={() => setPlayingId(rev.id)}
-            className="group relative aspect-[9/14.5] rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all border border-stone-200/90 bg-stone-100"
-          >
-            <Image
-              src={rev.image}
-              alt={rev.alt}
-              fill
-              sizes="(max-width: 768px) 33vw, 220px"
-              className="object-cover group-hover:scale-105 transition-transform duration-300"
-            />
+      {/* 2 Video Cards - Exactly matching the screenshot */}
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-[480px]">
+        {reviews.map((rev) => {
+          const isPlaying = playingId === rev.id;
 
-            {/* Subtle dark gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-black/10 group-hover:from-black/55 transition-colors" />
+          return (
+            <div
+              key={rev.id}
+              onClick={() => handleTogglePlay(rev.id)}
+              className="group relative aspect-[9/15.5] rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow bg-neutral-900 select-none"
+            >
+              {/* Video Element */}
+              <video
+                ref={(el) => {
+                  videoRefs.current[rev.id] = el;
+                }}
+                src={`${rev.videoSrc}#t=0.001`}
+                playsInline
+                preload="metadata"
+                onEnded={() => setPlayingId(null)}
+                className="w-full h-full object-cover"
+              />
 
-            {/* Play Button Overlay - Matching Screenshot 3 */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/85 sm:bg-white/90 border border-white/60 text-stone-900 flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
-                <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 fill-stone-900 ml-0.5"
-                  viewBox="0 0 24 24"
+              {/* Exact translucent Play Button from Screenshot (centered) */}
+              {!isPlaying && (
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border-2 border-white/95 bg-black/45 backdrop-blur-[2px] flex items-center justify-center shadow-lg transition-transform group-hover:scale-108">
+                    <svg
+                      className="w-4 h-4 sm:w-5 sm:h-5 fill-white ml-0.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
+              )}
+
+              {/* Pause icon overlay on hover while playing */}
+              {isPlaying && (
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                  <div className="w-10 h-10 rounded-full border-2 border-white/90 bg-black/50 backdrop-blur-[2px] flex items-center justify-center shadow-md">
+                    <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                    </svg>
+                  </div>
+                </div>
+              )}
+
+              {/* Audio toggle button (only visible when playing) */}
+              {isPlaying && (
+                <button
+                  type="button"
+                  onClick={(e) => handleToggleMute(rev.id, e)}
+                  aria-label="Toggle mute"
+                  className="absolute top-2 right-2 z-10 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center shadow transition-transform active:scale-90"
                 >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
+                  {isMuted[rev.id] ? (
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                    </svg>
+                  ) : (
+                    <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+                    </svg>
+                  )}
+                </button>
+              )}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
-      {/* Prev / Next Slider Controls */}
-      <div className="flex items-center justify-center gap-3 mt-3.5">
-        <button
-          type="button"
-          aria-label="Previous customer review"
-          className="w-8 h-8 rounded-full border border-stone-300 hover:border-stone-500 text-stone-600 flex items-center justify-center transition active:scale-95 bg-white shadow-xs"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button
-          type="button"
-          aria-label="Next customer review"
-          className="w-8 h-8 rounded-full border border-stone-300 hover:border-stone-500 text-stone-600 flex items-center justify-center transition active:scale-95 bg-white shadow-xs"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Video Modal if clicked */}
-      {playingId && (
+      {/* Video Modal if user wants full screen */}
+      {modalVideoId && activeModalReview && (
         <div
-          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
-          onClick={() => setPlayingId(null)}
+          className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4 backdrop-blur-xs"
+          onClick={() => setModalVideoId(null)}
         >
           <div
-            className="bg-white rounded-2xl p-6 max-w-sm w-full text-center relative shadow-2xl"
+            className="bg-white rounded-2xl overflow-hidden max-w-sm w-full relative shadow-2xl animate-in fade-in zoom-in-95 duration-200"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              onClick={() => setPlayingId(null)}
-              className="absolute top-3 right-3 text-stone-400 hover:text-stone-700 text-2xl font-bold leading-none"
+              onClick={() => setModalVideoId(null)}
+              className="absolute top-3 right-3 z-20 bg-black/60 hover:bg-black text-white w-8 h-8 rounded-full flex items-center justify-center text-xl font-bold cursor-pointer transition"
+              aria-label="Close video"
             >
               &times;
             </button>
-            <div className="w-12 h-12 rounded-full bg-[#fbf5f0] text-[#c47245] flex items-center justify-center mx-auto mb-3">
-              <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
+            <div className="relative aspect-[9/16] w-full bg-black">
+              <video
+                src={activeModalReview.videoSrc}
+                controls
+                autoPlay
+                playsInline
+                className="w-full h-full object-contain"
+              />
             </div>
-            <h4 className="font-bold text-stone-900 text-base mb-1">
-              Customer Video Testimonial
-            </h4>
-            <p className="text-xs text-stone-600 mb-4">
-              &ldquo;I have been taking Metabolae Ceylon Cinnamon for 3 months now. My fasting numbers stabilized and I haven&apos;t experienced any afternoon energy crashes!&rdquo;
-            </p>
-            <button
-              onClick={() => setPlayingId(null)}
-              className="w-full py-2 bg-[#c47245] hover:bg-[#b05d30] text-white rounded-lg text-sm font-semibold transition"
-            >
-              Close
-            </button>
+            <div className="p-4 text-left bg-white">
+              <div className="flex items-center justify-between mb-1">
+                <h4 className="font-bold text-stone-900 text-sm">
+                  {activeModalReview.author}
+                </h4>
+                <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+                  {activeModalReview.role}
+                </span>
+              </div>
+              <p className="text-xs text-stone-600 leading-relaxed italic">
+                &ldquo;{activeModalReview.quote}&rdquo;
+              </p>
+            </div>
           </div>
         </div>
       )}

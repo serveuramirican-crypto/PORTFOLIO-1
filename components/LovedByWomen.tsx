@@ -62,7 +62,7 @@ export const LovedByWomen: React.FC = () => {
           <article className="sb-lw-card">
             <img
               className="sb-lw-photo"
-              src="/assets/images/260819_D_D_SHOT_126_7644.webp"
+              src="https://i.imgur.com/M92xje5.jpeg"
               alt="Sarah R."
               loading="lazy"
             />
@@ -85,7 +85,7 @@ export const LovedByWomen: React.FC = () => {
           <article className="sb-lw-card">
             <img
               className="sb-lw-photo"
-              src="/assets/images/260819_D_D_SHOT_126_7676.webp"
+              src="https://i.imgur.com/LjIYYgU.jpeg"
               alt="Jessica L."
               loading="lazy"
             />
@@ -123,7 +123,7 @@ export const LovedByWomen: React.FC = () => {
             </div>
             <img
               className="sb-lw-photo sb-lw-photo-sm"
-              src="/assets/images/260819_D_D_SHOT_126_7687.webp"
+              src="https://i.imgur.com/P1ZYf19.jpeg"
               alt="Jessica L."
               loading="lazy"
             />
@@ -131,7 +131,7 @@ export const LovedByWomen: React.FC = () => {
           <article className="sb-lw-card">
             <img
               className="sb-lw-photo"
-              src="/assets/images/260819_D_D_SHOT_126_7700.webp"
+              src="https://i.imgur.com/ax2jjeY.jpeg"
               alt="Jessica L."
               loading="lazy"
             />

@@ -2,28 +2,28 @@ import React from "react";
 
 const COMFORT_CARDS = [
   {
-    photo: "/assets/images/260819_D_D_SHOT_126_7679.webp",
+    photo: "https://i.imgur.com/8K5OOja.jpeg",
     alt: "Buttery-soft 4-way stretch fabric",
     shade: "/images/s/files/1/0749/6102/7139/files/002_8c0a0754-74a4-4907-83bf-7365fabeab9c.png",
     title: "Buttery-Soft 4-Way Stretch",
     desc: "Moves with your body effortlessly while staying breathable, flexible, and comfy all day long.",
   },
   {
-    photo: "/assets/images/260819_D_D_SHOT_126_7687.webp",
+    photo: "https://i.imgur.com/BDHnwrE.jpeg",
     alt: "Wrinkle-resistant fabric",
     shade: "/images/s/files/1/0786/3956/2806/files/004_9eae002b-f5b4-4457-bd56-c98546e84c53.png",
     title: "Wrinkle-Resistant Fabric",
     desc: "Designed to remain crease-free and neat throughout lengthy days in them.",
   },
   {
-    photo: "/assets/images/260819_D_D_SHOT_126_7700.webp",
+    photo: "https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/Y52902s3.jpg?im=Resize,width=480",
     alt: "Supportive high-rise waistband",
     shade: "/images/s/files/1/0749/6102/7139/files/002_8c0a0754-74a4-4907-83bf-7365fabeab9c.png",
     title: "Supportive High-Rise Waistband",
     desc: "Offers a snug, supportive feel that flatters your shape without ever being tight or limiting.",
   },
   {
-    photo: "/assets/images/Desmond_Dempsey-Monogramming-large-LEOPARD-CREAM-H4H_67210305-4ad3-4057-ab39-80836c83db7a.webp",
+    photo: "https://cdn.gorillareign.site/storage/v1/object/public/products/product-images/d52e69f0-c938-40a0-8667-944c4c5d6f69/1792706932892-26wspr_d1521_pnk_m04_f9a8fd94-69fd-4729--0a8e1d.jpg",
     alt: "Deep functional side pockets",
     shade: "/images/s/files/1/0749/6102/7139/files/002_8c0a0754-74a4-4907-83bf-7365fabeab9c.png",
     title: "Deep Functional Side Pockets",

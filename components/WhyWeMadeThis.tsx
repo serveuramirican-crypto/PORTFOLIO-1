@@ -6,10 +6,10 @@ export const WhyWeMadeThis: React.FC = () => {
       <picture className="sb-wwm-bg">
         <source
           media="(max-width: 749px)"
-          srcSet="/assets/images/260819_D_D_SHOT_126_7644.webp"
+          srcSet="https://cdn.shopify.com/s/files/1/1036/8529/2311/files/001_665c1b73-34c0-48b0-8eea-9cad505c5183.jpg?v=1792538839"
         />
         <img
-          src="/assets/images/260819_D_D_SHOT_126_7644.webp"
+          src="https://cdn.shopify.com/s/files/1/1036/8529/2311/files/001_665c1b73-34c0-48b0-8eea-9cad505c5183.jpg?v=1792538839"
           alt="Why We Made This background"
           loading="lazy"
           width="2880"

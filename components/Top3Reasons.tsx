@@ -6,7 +6,7 @@ const CARDS = [
   {
     num: "/images/s/files/1/0797/2375/7651/files/001.svg",
     numAlt: "01",
-    photo: "/assets/images/260819_D_D_SHOT_126_7644.webp",
+    photo: "https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/Y52902s2.jpg?im=Resize,width=750",
     shade: "/images/s/files/1/0847/5908/5311/files/005.png",
     name: "Confidence in Every Outfit",
     bullets: [
@@ -18,7 +18,7 @@ const CARDS = [
   {
     num: "/images/s/files/1/1091/2985/9441/files/002.svg",
     numAlt: "02",
-    photo: "/assets/images/260819_D_D_SHOT_126_7669.webp",
+    photo: "https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/Y52902s3.jpg?im=Resize,width=480",
     shade: "/images/s/files/1/0806/1989/6971/files/007_86e81280-687e-4ea5-a725-edf9aa09b732.png",
     name: "Cool & Comfortable",
     bullets: [
@@ -30,7 +30,7 @@ const CARDS = [
   {
     num: "/images/s/files/1/1091/2982/6673/files/003.svg",
     numAlt: "03",
-    photo: "/assets/images/260819_D_D_SHOT_126_7676.webp",
+    photo: "https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/Y52902s.jpg?im=Resize,width=750",
     shade: "/images/s/files/1/0845/2731/7054/files/009_66e6f004-fa70-4089-8619-df1b7a72b62d.png",
     name: "Designed to Flatter",
     bullets: [

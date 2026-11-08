@@ -6,10 +6,10 @@ export const DesignedToFlatter: React.FC = () => {
       <picture className="sb-dt-bg">
         <source
           media="(max-width: 749px)"
-          srcSet="/assets/images/260819_D_D_SHOT_126_7655.webp"
+          srcSet="https://cdn.shopify.com/s/files/1/0841/7722/3906/files/005_bc29750c-9ed2-478e-abab-abf4f869101f.jpg?v=1792538860"
         />
         <img
-          src="/assets/images/260819_D_D_SHOT_126_7655.webp"
+          src="https://cdn.shopify.com/s/files/1/0841/7722/3906/files/005_bc29750c-9ed2-478e-abab-abf4f869101f.jpg?v=1792538860"
           alt="Designed to Flatter"
           loading="lazy"
         />

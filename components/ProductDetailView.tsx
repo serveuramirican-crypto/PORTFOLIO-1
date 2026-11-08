@@ -2,11 +2,9 @@
 
 import React from "react";
 import { RevQuotesBar } from "./RevQuotesBar";
-import { MetabolaeHero } from "./MetabolaeHero/MetabolaeHero";
+import { PoloHero } from "./PoloHero/PoloHero";
 import { TrustSection } from "./TrustSection";
 import { BleameUgcSection } from "./BleameSection/BleameUgcSection";
-import { PrimalsSocialProof } from "./PrimalsSection/PrimalsSocialProof";
-import { VideoReels } from "./VideoReels";
 import { DetailsTabs } from "./DetailsTabs";
 import { BleameCustomerReviews } from "./BleameReviews/BleameCustomerReviews";
 import { WhyWeMadeThis } from "./WhyWeMadeThis";
@@ -29,8 +27,8 @@ export const ProductDetailView: React.FC = () => {
       {/* 1. Review Quotes Top Bar */}
       <RevQuotesBar />
 
-      {/* 2. Top Product Hero - Metabolae Softgels Ceylon Cinnamon */}
-      <MetabolaeHero />
+      {/* 2. Top Product Hero - Polo Club Ultralight Puffer Vest Brunei */}
+      <PoloHero />
 
       {/* 3. Interactive Tabs - after "What our customers are saying:" */}
       <DetailsTabs />
@@ -47,11 +45,7 @@ export const ProductDetailView: React.FC = () => {
       {/* 7. Top 3 Reasons Why Women Wear It On Repeat */}
       <Top3Reasons />
 
-      {/* 8. Primals Video Carousel & Social Proof ("JOIN MILLIONS WHO DITCHED PLASTIC FOR GOOD") */}
-      <PrimalsSocialProof />
 
-      {/* 9. Social Proof Video Reels */}
-      <VideoReels />
 
       {/* 10. Bleame Customer Photo & Video Reviews Grid */}
       <BleameCustomerReviews />
