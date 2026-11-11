@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from "react";
 
-interface VideoReview {
+export interface VideoReview {
   id: string;
   videoSrc: string;
   alt: string;
@@ -12,7 +12,13 @@ interface VideoReview {
   quote: string;
 }
 
-export const MetabolaeVideoReviews: React.FC = () => {
+interface MetabolaeVideoReviewsProps {
+  reviews?: VideoReview[];
+}
+
+export const MetabolaeVideoReviews: React.FC<MetabolaeVideoReviewsProps> = ({
+  reviews: customReviews,
+}) => {
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [modalVideoId, setModalVideoId] = useState<string | null>(null);
   const [isMuted, setIsMuted] = useState<{ [id: string]: boolean }>({
@@ -22,7 +28,7 @@ export const MetabolaeVideoReviews: React.FC = () => {
 
   const videoRefs = useRef<{ [id: string]: HTMLVideoElement | null }>({});
 
-  const reviews: VideoReview[] = [
+  const defaultReviews: VideoReview[] = [
     {
       id: "video-1",
       videoSrc: "/customer_videos/vsl_video_1.mp4",
@@ -42,6 +48,8 @@ export const MetabolaeVideoReviews: React.FC = () => {
       quote: "Hands down the most comfortable and stylish set I've ever owned. Love the print!",
     },
   ];
+
+  const reviews = customReviews && customReviews.length > 0 ? customReviews : defaultReviews;
 
   const handleTogglePlay = (id: string) => {
     const videoEl = videoRefs.current[id];
